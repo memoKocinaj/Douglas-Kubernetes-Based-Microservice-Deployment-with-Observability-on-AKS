@@ -1,0 +1,10 @@
+#apiVersion: storage.k8s.io/v1
+#kind: StorageClass
+#metadata:
+#  name: mk-retain-storage
+#provisioner: disk.csi.azure.com
+#reclaimPolicy: Retain   
+#volumeBindingMode: WaitForFirstConsumer
+
+## would have saved the data in the event of a cluster deletion,
+## did not need this for my use-case

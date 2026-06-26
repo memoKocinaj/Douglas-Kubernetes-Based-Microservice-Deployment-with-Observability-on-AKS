@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mk-simple-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mk-simple-app
+  template:
+    metadata:
+      labels:
+        app: mk-simple-app
+    spec:
+      containers:
+      - name: mk-simple-app
+        image: memoko/mk-simple-app:v8   # <--- CURRENT VERSION
+        ports:
+        - containerPort: 3000

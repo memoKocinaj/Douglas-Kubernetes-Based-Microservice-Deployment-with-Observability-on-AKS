@@ -1,0 +1,30 @@
+# Local directory for Terraform clones
+.terraform/
+
+# .tfstate files contain sensitive data and should be stored in a remote backend (e.g., S3), not Git
+*.tfstate
+*.tfstate.*
+*.terraform.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Exclude all variable files because they likely contain secrets
+*.tfvars
+*.auto.tfvars
+
+# Except include template example files
+!*.tfvars.example
+
+# Ignore override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore the backend configuration file
+backend.hcl
+
+# Ignore the node_modules directory
+node_modules/

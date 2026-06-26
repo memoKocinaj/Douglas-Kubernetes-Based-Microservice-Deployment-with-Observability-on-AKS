@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: mk-simple-app-monitor
+  labels:
+    release: mk-monitoring  
+spec:
+  selector:
+    matchLabels:
+      app: mk-simple-app     
+  endpoints:
+    - port: http            
+      path: /metrics        
+      interval: 15s

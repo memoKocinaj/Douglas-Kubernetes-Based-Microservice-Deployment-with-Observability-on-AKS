@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mk-simple-app-service
+  labels:
+    app: mk-simple-app  
+spec:
+  type: ClusterIP 
+  selector:
+    app: mk-simple-app
+  ports:
+    - name: http
+      port: 80
+      targetPort: 3000
